@@ -1,17 +1,29 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Mario1/Tilesets/OverWorld.png" type="Texture" id=1]
-
-[sub_resource type="AtlasTexture" id=1]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 48, 77, 80, 35 )
+[ext_resource path="res://Scenes/BackGrd1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Ressources/ciel.jpg" type="Texture" id=2]
+[ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/BackGrd2.tscn" type="PackedScene" id=4]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="OverWorld2" type="Sprite" parent="."]
-position = Vector2( 512.746, 244.613 )
-scale = Vector2( 7.5, 7.5 )
-texture = SubResource( 1 )
+[node name="ciel" type="Sprite" parent="."]
+visible = false
+position = Vector2( 31280.4, 4378.94 )
+scale = Vector2( 39.6317, 11.7137 )
+z_index = -20
+texture = ExtResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+script = ExtResource( 3 )
+
+[node name="BackGrd2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1794.51, 730 )
+
+[node name="BackGrd1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 4859.61, 730 )
+
+[node name="BackGrd3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 7521.73, 730 )

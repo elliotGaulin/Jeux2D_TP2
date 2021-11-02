@@ -1,0 +1,9 @@
+-Niveau (3)
+-Ennemis (hit box + fonctions)
+-Fin de niveau animations
+-Regler hauteur saut 
+-Menu
+-Mario Fonctions
+-UI -> vie/ coins
+-Power up + fonction/spawn block
+-contact avec blocs

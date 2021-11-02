@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/OverWorld.png-4d00696144b337e61f06d206625a069e.stex"
+path="res://.import/ciel.jpg-a39b154672b025d98cbf6aff9a406c3d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mario1/Tilesets/OverWorld.png"
-dest_files=[ "res://.import/OverWorld.png-4d00696144b337e61f06d206625a069e.stex" ]
+source_file="res://Ressources/ciel.jpg"
+dest_files=[ "res://.import/ciel.jpg-a39b154672b025d98cbf6aff9a406c3d.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
