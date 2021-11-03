@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Items.png-8770225c0d5a93e60a54723f8c20e0f1.stex"
+path="res://.import/FB500-3.png-60f54c94179e171f7e7610976818adfb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mario1/Misc/Items.png"
-dest_files=[ "res://.import/Items.png-8770225c0d5a93e60a54723f8c20e0f1.stex" ]
+source_file="res://Ressources/fireball/FB500-3.png"
+dest_files=[ "res://.import/FB500-3.png-60f54c94179e171f7e7610976818adfb.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
