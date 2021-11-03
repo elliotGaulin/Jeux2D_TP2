@@ -11,8 +11,18 @@ config_version=4
 [application]
 
 config/name="MarioButBetter"
+
 run/main_scene="res://Scenes/TEST.tscn"
 config/icon="res://icon.png"
+
+window/size/width=1920
+window/size/height=1080
+window/size/fullscreen=true
+window/dpi/allow_hidpi=true
+window/per_pixel_transparency/allowed=true
+window/per_pixel_transparency/enabled=true
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [input]
 

@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Mario1/Tilesets/OverWorld.png" type="Texture" id=1]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 48, 77, 80, 35 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 8, 96, 32, 16 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 89, 32, 30, 23 )
+
+[node name="BackGrd2" type="Sprite"]
+position = Vector2( 1794.51, 730.187 )
+scale = Vector2( 20, 20 )
+texture = SubResource( 1 )
+
+[node name="Buisson" type="Sprite" parent="."]
+position = Vector2( 32.6114, 11.4538 )
+scale = Vector2( 0.75, 0.75 )
+texture = SubResource( 2 )
+
+[node name="Buisson2" type="Sprite" parent="."]
+position = Vector2( -38.8038, 11.4929 )
+scale = Vector2( 0.75, 0.75 )
+texture = SubResource( 2 )
+
+[node name="Buisson3" type="Sprite" parent="."]
+position = Vector2( -29.6043, 7.36586 )
+scale = Vector2( 0.75, 0.75 )
+z_index = -4
+texture = SubResource( 2 )
+
+[node name="Nuage" type="Sprite" parent="."]
+position = Vector2( 40.8708, -20.7889 )
+scale = Vector2( 0.6, 0.6 )
+texture = SubResource( 3 )
+
+[node name="Nuage3" type="Sprite" parent="."]
+position = Vector2( -43.2243, -15.7165 )
+scale = Vector2( 0.6, 0.6 )
+texture = SubResource( 3 )
+
+[node name="Nuage2" type="Sprite" parent="."]
+position = Vector2( 52.978, -17.0373 )
+scale = Vector2( 0.6, 0.6 )
+texture = SubResource( 3 )
