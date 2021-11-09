@@ -1,28 +1,23 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Personnage.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/bloc_brique.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/champignon.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/fleur_feu.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scripts/champignon.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/tilemap.tres" type="TileSet" id=2]
+[ext_resource path="res://Scenes/Gomba.tscn" type="PackedScene" id=6]
 
 [node name="Node" type="Node"]
 
-[node name="Sol" parent="." instance=ExtResource( 2 )]
-position = Vector2( 408.119, 593.206 )
-scale = Vector2( 100, 10 )
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 4, 4 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 524294, 1, 0, 524302, 1, 0, 589824, 1, 0, 589825, 1, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0, 589834, 1, 0, 589835, 1, 0, 589836, 1, 0, 589837, 1, 0, 589838, 1, 0, 589839, 1, 0 )
 
 [node name="Personnage" parent="." instance=ExtResource( 1 )]
-position = Vector2( 86.6714, 218.626 )
-scale = Vector2( 5, 5 )
+position = Vector2( 78.7705, 445.623 )
+scale = Vector2( 4, 4 )
 
-[node name="champignon" parent="." instance=ExtResource( 3 )]
-position = Vector2( 678.025, 105.52 )
-scale = Vector2( 5, 5 )
-script = ExtResource( 5 )
-gravity = 1000
-
-[node name="fleur_feu" parent="." instance=ExtResource( 4 )]
-position = Vector2( 466.696, 107.943 )
-scale = Vector2( 5, 5 )
-gravity = 1000
+[node name="Gomba" parent="." instance=ExtResource( 6 )]
+position = Vector2( 632.354, 497.811 )
+scale = Vector2( 4, 4 )
+vitesse = 300

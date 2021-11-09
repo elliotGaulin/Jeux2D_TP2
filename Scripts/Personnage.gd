@@ -114,7 +114,10 @@ func _collision(collision):
 			
 func tirer():
 	var b = boule_de_feu.instance()
-	b.start($emplacement_tir.global_position, rotation)
+	if $AnimatedSprite.flip_h == true:
+		b.start($emplacement_tir_gauche.global_position, rotation  + 3.14159 - 0.7)		
+	else:
+		b.start($emplacement_tir_droit.global_position, rotation + 0.7)
 	get_parent().add_child(b)
 	$AnimatedSprite.animation = "tirer"
 	$AnimatedSprite.play()

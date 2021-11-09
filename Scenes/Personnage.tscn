@@ -11,18 +11,23 @@ jump_speed = -600
 gravity = 1000
 friction = 0.3
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -7.5 )
+shape = ExtResource( 3 )
+
+[node name="Timer_tirer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0.0703907, -7.35832 )
 frames = ExtResource( 1 )
 animation = "tirer"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -7.5 )
-shape = ExtResource( 3 )
+[node name="emplacement_tir_droit" type="Position2D" parent="."]
+position = Vector2( 15.0482, -5.25511 )
+rotation = 3.14159
 
-[node name="emplacement_tir" type="Position2D" parent="."]
-position = Vector2( 14.4199, -5.79582 )
-
-[node name="Timer_tirer" type="Timer" parent="."]
-wait_time = 0.2
-one_shot = true
+[node name="emplacement_tir_gauche" type="Position2D" parent="."]
+position = Vector2( -15.048, -5.255 )
+rotation = 3.14159
