@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Mario1/Characters/Enemies.png" type="Texture" id=1]
+[ext_resource path="res://Koopa.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8.7594, 5.0584 )
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 4.96816
+height = 11.5872
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 2.79473, 5.49837 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 0.343388, 1.92758 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+collision_layer = 32
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.984627, 1.48444 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2_Tete" type="CollisionShape2D" parent="."]
+position = Vector2( -1.36004, -7.92802 )
+rotation = -0.652753
+shape = SubResource( 5 )
+
+[node name="Area2D_Gauche" type="Area2D" parent="."]
+position = Vector2( -14.6832, -2.00226 )
+collision_layer = 32
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Gauche"]
+position = Vector2( 5.72919, 0.758446 )
+shape = SubResource( 6 )
+
+[node name="Area2D_solG" type="Area2D" parent="."]
+position = Vector2( -9, 9.599 )
+collision_layer = 32
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_solG"]
+shape = SubResource( 7 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.882653, -9.38686 )
+frames = SubResource( 4 )
+
+[connection signal="area_exited" from="Area2D_Gauche" to="." method="_on_Area2D_Gauche_area_exited"]
+[connection signal="body_entered" from="Area2D_Gauche" to="." method="_on_Area2D_Gauche_body_entered"]
+[connection signal="body_exited" from="Area2D_solG" to="." method="_on_Area2D_solG_body_exited"]
