@@ -26,7 +26,6 @@ func hit():
 
 
 func _on_Area2DDroite_body_entered(body):
-	print(body.name)
 	if body.name != "Personnage":
 		dir *= -1
 	else:

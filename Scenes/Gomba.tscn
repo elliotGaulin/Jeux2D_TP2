@@ -7,22 +7,22 @@
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
 region = Rect2( 32, 0, 32, 32 )
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 6 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 10, 8.5 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 4, 7.5 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
@@ -30,24 +30,27 @@ script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -7.5 )
-frames = SubResource( 4 )
+frames = SubResource( 3 )
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="Area2DDroite" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DDroite"]
 position = Vector2( 7, 0 )
-shape = SubResource( 7 )
+shape = SubResource( 5 )
 
 [node name="Area2DGauche" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DGauche"]
 position = Vector2( -7, 0 )
-shape = SubResource( 7 )
+shape = SubResource( 5 )
+
+[node name="Area2DDessus" type="Area2D" parent="."]
 
 [connection signal="body_entered" from="Area2DDroite" to="." method="_on_Area2DDroite_body_entered"]
 [connection signal="body_entered" from="Area2DGauche" to="." method="_on_Area2DGauche_body_entered"]
+[connection signal="body_entered" from="Area2DDessus" to="." method="_on_Area2DGauche_body_entered"]

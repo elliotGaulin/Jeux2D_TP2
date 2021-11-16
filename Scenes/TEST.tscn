@@ -16,8 +16,10 @@ tile_data = PoolIntArray( 524294, 1, 0, 524302, 1, 0, 589824, 1, 0, 589825, 1, 0
 [node name="Personnage" parent="." instance=ExtResource( 1 )]
 position = Vector2( 78.7705, 445.623 )
 scale = Vector2( 4, 4 )
+collision_layer = 2
 
 [node name="Gomba" parent="." instance=ExtResource( 6 )]
 position = Vector2( 632.354, 497.811 )
 scale = Vector2( 4, 4 )
+collision_layer = 4
 vitesse = 300

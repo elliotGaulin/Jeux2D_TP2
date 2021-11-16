@@ -8,6 +8,7 @@ export (float, 0, 1.0) var friction = 0.1
 export (float, 0, 1.0) var acceleration = 0.25
 
 var etat = ""
+var invinsible = false
 var velocity = Vector2.ZERO
 
 var frames_petit = preload("res://Ressources/Animation_personnage_petit.tres")
@@ -94,10 +95,25 @@ func changer_etat(nouvel_etat):
 		$AnimatedSprite.frames = frames_feu
 		$CollisionShape2D.shape = collision_shape_grand
 		$CollisionShape2D.transform.origin = Vector2(0,-7.5)
-		
 	else:
-		print(nouvel_etat + " n'est pas un état valide")		
-
+		print(nouvel_etat + " n'est pas un état valide")
+	#Fait clignoter + invincible
+	for i in range(5):
+		if i == 0:
+			invinsible = true
+		visible = false
+		yield(get_tree().create_timer(0.15), "timeout")
+		visible = true
+		while visible == false:
+			 pass
+		yield(get_tree().create_timer(0.15), "timeout")
+		visible = false
+		while visible == true:
+			pass
+	visible = true
+	invinsible = false
+	
+	
 func get_etat():
 	return etat
 	
@@ -122,3 +138,16 @@ func tirer():
 	$AnimatedSprite.animation = "tirer"
 	$AnimatedSprite.play()
 	$Timer_tirer.start()
+	
+func hit():
+	if !invinsible:
+		if etat == "petit":
+			mourrir()
+		elif etat == "grand":
+			changer_etat("petit")
+		elif etat == "feu":
+			changer_etat("grand")
+					
+func mourrir():
+	print("he already dead")
+	queue_free()
