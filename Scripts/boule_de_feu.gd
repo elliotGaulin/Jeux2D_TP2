@@ -1,7 +1,9 @@
 extends KinematicBody2D
 
-export var speed = 500
-export var gravity = 1000
+export var speed = 1000
+export var gravity = 5000
+export var max_collision = 4
+var nombre_collision = 0
 
 var velocity = Vector2()
 
@@ -17,14 +19,16 @@ func _physics_process(delta):
 	#var collision = move_and_collide(velocity * delta)
 	var slide_count = get_slide_count()
 	if slide_count:
+		nombre_collision += 1
+		if nombre_collision > max_collision:
+			queue_free()
+			return
 		var collision = get_slide_collision(slide_count - 1)
-		if collision.collider.has_method("hit"):
-			collision.collider.hit()
-		else:
-			velocity = velocity.bounce(collision.normal)
-
+		_collision(collision)
 #Action effectuée lors d'une collision
 func _collision(collision):
 	if collision.collider.has_method("hit"):
 		collision.collider.hit()
-	queue_free()	
+		queue_free()
+	else:
+		velocity = velocity.bounce(collision.normal)
