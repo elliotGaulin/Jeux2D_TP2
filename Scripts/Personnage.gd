@@ -6,7 +6,7 @@ export (int) var gravity = 4000
 
 export (float, 0, 1.0) var friction = 0.1
 export (float, 0, 1.0) var acceleration = 0.25
-
+var dir
 var etat = ""
 var invinsible = false
 var velocity = Vector2.ZERO
@@ -24,7 +24,7 @@ func _ready():
 	changer_etat("petit")
 
 func get_input():
-	var dir = 0
+	dir = 0
 	if Input.is_action_pressed("walk_right"):
 		dir += 1
 	if Input.is_action_pressed("walk_left"):
