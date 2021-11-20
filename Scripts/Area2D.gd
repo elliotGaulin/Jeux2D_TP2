@@ -1,7 +1,10 @@
 extends Area2D
 
 onready var champignon = preload("res://Scenes/champignon.tscn")
-onready var mario = get_parent().get_node("Mario")
+onready var mario = get_parent().get_node("Personnage")
+onready var parent = get_parent()
+onready var parent_children = get_children()
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

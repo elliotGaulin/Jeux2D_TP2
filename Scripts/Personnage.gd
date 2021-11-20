@@ -24,6 +24,7 @@ func _ready():
 	name = "Personnage"
 	changer_etat("petit")
 
+
 func get_input():
 	dir = 0
 	if Input.is_action_pressed("walk_right"):
@@ -102,6 +103,8 @@ func changer_etat(nouvel_etat):
 	for i in range(5):
 		if i == 0:
 			invincible = true
+			set_collision_layer_bit(0, false) 
+			set_collision_layer_bit(1, true) 
 		visible = false
 		yield(get_tree().create_timer(0.15), "timeout")
 		visible = true
@@ -113,14 +116,14 @@ func changer_etat(nouvel_etat):
 			pass
 	visible = true
 	invincible = false
-	
+	set_collision_layer_bit(0, true) 
+	set_collision_layer_bit(1, false)	
 	
 func get_etat():
 	return etat
 	
 func _collision(collision):
 	var collider = collision.collider
-	print(collider.name)
 	if collider.name == "champignon":
 		if etat == "petit":
 			changer_etat("grand")
@@ -153,3 +156,4 @@ func hit():
 func mourrir():
 	print("he already dead")
 	queue_free()
+

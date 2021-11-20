@@ -29,7 +29,6 @@ func hit():
 
 
 func _on_Area2DDroite_body_entered(body):
-	print(body.name)
 	if body.name == "Personnage":
 		body.hit()
 	elif body.name == "Boule_de_feu":
@@ -39,7 +38,6 @@ func _on_Area2DDroite_body_entered(body):
 
 
 func _on_Area2DGauche_body_entered(body):
-	print(body.name)
 	if body.name == "Personnage":
 		body.hit()
 	elif body.name == "Boule_de_feu":
