@@ -8,7 +8,7 @@ export (float, 0, 1.0) var friction = 0.1
 export (float, 0, 1.0) var acceleration = 0.25
 var dir
 var etat = ""
-var invinsible = false
+var invincible = false
 var velocity = Vector2.ZERO
 
 var frames_petit = preload("res://Ressources/Animation_personnage_petit.tres")
@@ -21,6 +21,7 @@ var collision_shape_grand = preload("res://Ressources/collisionShape_personnage_
 var boule_de_feu = preload('res://Scenes/boule_de_feu.tscn')
 
 func _ready():
+	name = "Personnage"
 	changer_etat("petit")
 
 func get_input():
@@ -100,7 +101,7 @@ func changer_etat(nouvel_etat):
 	#Fait clignoter + invincible
 	for i in range(5):
 		if i == 0:
-			invinsible = true
+			invincible = true
 		visible = false
 		yield(get_tree().create_timer(0.15), "timeout")
 		visible = true
@@ -111,7 +112,7 @@ func changer_etat(nouvel_etat):
 		while visible == true:
 			pass
 	visible = true
-	invinsible = false
+	invincible = false
 	
 	
 func get_etat():
@@ -119,6 +120,7 @@ func get_etat():
 	
 func _collision(collision):
 	var collider = collision.collider
+	print(collider.name)
 	if collider.name == "champignon":
 		if etat == "petit":
 			changer_etat("grand")
@@ -140,7 +142,7 @@ func tirer():
 	$Timer_tirer.start()
 	
 func hit():
-	if !invinsible:
+	if !invincible:
 		if etat == "petit":
 			mourrir()
 		elif etat == "grand":

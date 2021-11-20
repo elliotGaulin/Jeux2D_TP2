@@ -12,6 +12,9 @@ export (int) var gravity = 4000
 var dir
 
 func _ready():
+	set_collision_layer_bit(2, true)
+	set_collision_mask_bit(0, true)
+	set_collision_mask_bit(2, true)
 	dir = dir_initiale
 	
 func _physics_process(delta):
@@ -26,15 +29,26 @@ func hit():
 
 
 func _on_Area2DDroite_body_entered(body):
-	if body.name != "Personnage":
-		dir *= -1
-	else:
+	print(body.name)
+	if body.name == "Personnage":
 		body.hit()
+	elif body.name == "Boule_de_feu":
+		pass
+	else:
+		dir *= -1
 
 
 func _on_Area2DGauche_body_entered(body):
 	print(body.name)
-	if body.name != "Personnage":
-		dir *= -1
-	else:
+	if body.name == "Personnage":
 		body.hit()
+	elif body.name == "Boule_de_feu":
+		pass
+	else:
+		dir *= -1
+
+
+func _on_Area2DDessus_body_entered(body):
+	if body.name == "Personnage":
+		if !body.invincible:
+			self.hit()
