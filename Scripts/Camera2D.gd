@@ -23,10 +23,11 @@ func _ready():
 	background3_initial = Backgrd3.position.x	
 
 func _process(delta):
-	if Mario.position.x >= 600:
-		position.x = Mario.position.x - 600
-		if position.x != last_position_x:
-			Backgrd1.position.x = position.x - last_position_x * 0.33333 + background1_initial
-			Backgrd2.position.x = position.x - last_position_x * 0.33333 + background2_initial
-			Backgrd3.position.x = position.x - last_position_x * 0.33333 + background3_initial
-		last_position_x = position.x
+	if is_instance_valid(Mario):
+		if Mario.position.x >= 600:
+			position.x = Mario.position.x - 600
+			if position.x != last_position_x:
+				Backgrd1.position.x = position.x - last_position_x * 0.33333 + background1_initial
+				Backgrd2.position.x = position.x - last_position_x * 0.33333 + background2_initial
+				Backgrd3.position.x = position.x - last_position_x * 0.33333 + background3_initial
+			last_position_x = position.x

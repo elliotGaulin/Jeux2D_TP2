@@ -7,6 +7,9 @@ var nombre_collision = 0
 
 var velocity = Vector2()
 
+func _ready():
+	name = "Boule_de_feu"
+
 #démarre le mouvement de la balle
 func start(pos, dir):
 	rotation = dir
