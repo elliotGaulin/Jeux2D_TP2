@@ -120,7 +120,7 @@ func get_etat():
 	
 func _collision(collision):
 	var collider = collision.collider
-	print(collider.name)
+	#print(collider.name)
 	if collider.name == "champignon":
 		if etat == "petit":
 			changer_etat("grand")
