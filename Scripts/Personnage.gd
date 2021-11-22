@@ -156,4 +156,7 @@ func hit():
 func mourrir():
 	print("he already dead")
 	queue_free()
+	
+func killKoopa():
+	velocity.y = jump_speed/1
 

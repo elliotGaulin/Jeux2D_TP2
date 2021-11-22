@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export var speed = 1000
+export var speed = 800
 export var gravity = 5000
 export var max_collision = 4
 var nombre_collision = 0
@@ -18,6 +18,10 @@ func _ready():
 func start(pos, dir):
 	rotation = dir
 	position = pos
+	randomize()
+	var direction_depart = round(rand_range(0,1))
+	if direction_depart == 1:
+		velocity.x *= -1
 	velocity = Vector2(speed, 0).rotated(rotation)
 #Gere la physique de la balle
 func _physics_process(delta):
