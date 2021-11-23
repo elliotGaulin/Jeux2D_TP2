@@ -72,7 +72,7 @@ position = Vector2( -15.048, -5.255 )
 rotation = 3.14159
 
 [node name="hitbox_tete" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -22.815 )
+position = Vector2( 0, -23.2238 )
 shape = ExtResource( 4 )
 
 [node name="AnimatedSpriteGauche" type="AnimatedSprite" parent="."]

@@ -18,10 +18,11 @@
 scale = Vector2( 4, 4 )
 
 [node name="ciel" type="Sprite" parent="."]
-position = Vector2( 7463.68, 2544.71 )
+position = Vector2( 295.765, 168.485 )
 scale = Vector2( 9.6517, 5.10037 )
 z_index = -20
 texture = ExtResource( 2 )
+offset = Vector2( 742.542, 465.893 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
@@ -72,6 +73,7 @@ scale = Vector2( 0.25, 0.25 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1112.95, 224.391 )
+collision_layer = 36
 
 [node name="KinematicBody2D3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1878.47, 168.268 )
