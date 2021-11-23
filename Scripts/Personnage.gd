@@ -67,12 +67,12 @@ func _physics_process(delta):
 func _process(delta):
 	get_input()
 # Pour débug : Permet de changer l'état de mario avec les touches
-#	if Input.is_action_just_pressed("1"):
-#		changer_etat("petit")
-#	if Input.is_action_just_pressed("2"):
-#		changer_etat("grand")
-#	if Input.is_action_just_pressed("3"):
-#		changer_etat("feu")
+	if Input.is_action_just_pressed("1"):
+		changer_etat("petit")
+	if Input.is_action_just_pressed("2"):
+		changer_etat("grand")
+	if Input.is_action_just_pressed("3"):
+		changer_etat("feu")
 	var dir = 0
 	#Gestion de la direction / animations
 	if Input.is_action_pressed("walk_right"):
