@@ -1,10 +1,10 @@
 extends Area2D
 
-onready var champignon = preload("res://Scenes/champignon.tscn")
+onready var tilemap = get_parent().get_node("TileMap")
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var premierefois = true
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,10 +16,7 @@ func _ready():
 #	pass
 
 
-func _on_Area2D_Special_body_entered(body):
-	if (premierefois == true):
-		var b = champignon.instance()
-		get_parent().add_child(b)
-		b.start(position.x, position.y - 10, body.dir)
-		queue_free()
-	
+func _on_Area2D_body_entered(body):
+	var tile = tilemap.world_to_map(position)
+	tilemap.set_cell(tile.x, tile.y, -1)
+	queue_free()
