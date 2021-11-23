@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Castle.png-3c36d05534b68e9d736bca933a187f84.stex"
+path="res://.import/carapace.png-3a144319a96f04a6148f31f9003aa12d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mario1/Tilesets/Castle.png"
-dest_files=[ "res://.import/Castle.png-3c36d05534b68e9d736bca933a187f84.stex" ]
+source_file="res://Mario1/Characters/carapace.png"
+dest_files=[ "res://.import/carapace.png-3a144319a96f04a6148f31f9003aa12d.stex" ]
 
 [params]
 

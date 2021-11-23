@@ -23,6 +23,7 @@ func _ready():
 func _physics_process(delta):
 	if dir == 1:
 		$AnimatedSprite.flip_h = true
+<<<<<<< HEAD
 		if $Area2DTete/CollisionShape2_Tete.rotation < 0:
 			$Area2DTete/CollisionShape2_Tete.rotation = $Area2DTete/CollisionShape2_Tete.rotation * -1
 			print($Area2DTete/CollisionShape2_Tete.rotation)
@@ -31,6 +32,14 @@ func _physics_process(delta):
 		if $Area2DTete/CollisionShape2_Tete.rotation > 0:
 			$Area2DTete/CollisionShape2_Tete.rotation = $Area2DTete/CollisionShape2_Tete.rotation * -1
 			print($Area2DTete/CollisionShape2_Tete.rotation)
+=======
+		if $CollisionShape2_Tete.rotation < 0:
+			$CollisionShape2_Tete.rotation = $CollisionShape2_Tete.rotation * -1
+	if dir == -1:
+		$AnimatedSprite.flip_h = false
+		if $CollisionShape2_Tete.rotation > 0:
+			$CollisionShape2_Tete.rotation = $CollisionShape2_Tete.rotation * -1
+>>>>>>> master
 			
 	if position.y > 2000:
 		queue_free()
@@ -75,6 +84,7 @@ func _on_Area2D_Gauche_body_entered(body):
 
 
 func _on_Area2D_solG_body_exited(body):
+	print(body.name)
 	if tourner == 1:
 		if (gauche == 0):
 			dir *= -1
