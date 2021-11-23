@@ -16,7 +16,7 @@ func _ready():
 
 
 func _on_Jouer_button_down():
-	pass
+	get_tree().change_scene("res://Scenes/tuto.tscn")
 
 
 func _on_Instru_button_down():

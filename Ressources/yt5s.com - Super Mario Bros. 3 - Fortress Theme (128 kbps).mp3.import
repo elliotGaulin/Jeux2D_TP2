@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/yt5s.com - Super Mario Bros. 3 - Fortress Theme (128 kbps).mp3-fd39f617b40012f0c323ec53f21e7ddf.mp3str"
+
+[deps]
+
+source_file="res://Ressources/yt5s.com - Super Mario Bros. 3 - Fortress Theme (128 kbps).mp3"
+dest_files=[ "res://.import/yt5s.com - Super Mario Bros. 3 - Fortress Theme (128 kbps).mp3-fd39f617b40012f0c323ec53f21e7ddf.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

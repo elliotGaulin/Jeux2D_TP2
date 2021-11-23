@@ -22,3 +22,9 @@ func _process(delta):
 func _on_Button_pressed():
 	get_tree().change_scene("res://Scenes/niveauFinal.tscn")
 	get_tree().paused = false
+
+
+func _on_Button2_pressed():
+	get_tree().change_scene("res://Scenes/Menu.tscn")
+	get_tree().paused = false
+	

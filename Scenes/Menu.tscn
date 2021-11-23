@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Ressources/font/04B_30__.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://Scenes/BackGrd1.tscn" type="PackedScene" id=2]
@@ -9,10 +9,11 @@
 [ext_resource path="res://Ressources/Animation_personnage_petit.tres" type="SpriteFrames" id=7]
 [ext_resource path="res://Scripts/MenuFontions.gd" type="Script" id=8]
 [ext_resource path="res://Ressources/collisionShape_personnage_petit.tres" type="Shape2D" id=9]
-[ext_resource path="res://Scenes/Mario.gd" type="Script" id=10]
+[ext_resource path="res://Scripts/Mario.gd" type="Script" id=10]
 [ext_resource path="res://Ressources/SmokeFX Lite 3A sheet.png" type="Texture" id=11]
 [ext_resource path="res://Scenes/Gomba.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Mario1/Tilesets/OverWorld.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/Musique.tscn" type="PackedScene" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
@@ -301,8 +302,9 @@ visible = false
 position = Vector2( -11.5502, 11.6097 )
 scale = Vector2( 0.45, 0.45 )
 frames = SubResource( 16 )
-frame = 5
 playing = true
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 14 )]
 
 [connection signal="button_down" from="Control/HBoxContainer/VBoxContainer/Jouer" to="Control" method="_on_Jouer_button_down"]
 [connection signal="button_down" from="Control/HBoxContainer/VBoxContainer/Instru" to="Control" method="_on_Instru_button_down"]

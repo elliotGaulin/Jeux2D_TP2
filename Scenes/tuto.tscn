@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Personnage.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Scenes/CanvasLayerPause.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/CanvasLayerFinTuto.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/CanvasLayerMort.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Musique.tscn" type="PackedScene" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -137,3 +138,5 @@ position = Vector2( 56.8636, 207.005 )
 [node name="CanvasLayer2" parent="." instance=ExtResource( 13 )]
 
 [node name="CanvasLayer3" parent="." instance=ExtResource( 14 )]
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 15 )]

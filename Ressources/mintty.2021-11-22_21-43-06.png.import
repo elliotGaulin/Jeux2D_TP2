@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mintty.2021-11-22_21-43-06.png-a7eaa7bce56966cd20d06026312f43bf.stex"
+path="res://.import/mintty.2021-11-22_21-43-06.png-f111303ed769993bef058463abbe6a89.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mintty.2021-11-22_21-43-06.png"
-dest_files=[ "res://.import/mintty.2021-11-22_21-43-06.png-a7eaa7bce56966cd20d06026312f43bf.stex" ]
+source_file="res://Ressources/mintty.2021-11-22_21-43-06.png"
+dest_files=[ "res://.import/mintty.2021-11-22_21-43-06.png-f111303ed769993bef058463abbe6a89.stex" ]
 
 [params]
 

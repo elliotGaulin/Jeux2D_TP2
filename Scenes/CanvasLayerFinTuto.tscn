@@ -65,4 +65,4 @@ custom_fonts/font = SubResource( 3 )
 text = "Retour au menu"
 
 [connection signal="pressed" from="Popup/VBoxContainer/Button" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="Popup/VBoxContainer/Button2" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Popup/VBoxContainer/Button2" to="." method="_on_Button2_pressed"]
