@@ -80,7 +80,7 @@ visible = false
 position = Vector2( -10.7093, 4.56721 )
 scale = Vector2( 0.45, 0.45 )
 frames = SubResource( 7 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="AnimatedSpriteDroite" type="AnimatedSprite" parent="."]
@@ -88,6 +88,6 @@ visible = false
 position = Vector2( 11.2605, 4.48847 )
 scale = Vector2( 0.45, 0.45 )
 frames = SubResource( 7 )
-frame = 3
+frame = 1
 playing = true
 flip_h = true

@@ -1,6 +1,6 @@
 extends Camera2D
 
-onready var Mario = get_parent().get_node("Mario")
+onready var Mario = get_parent().get_node("Personnage")
 onready var Backgrd1 = get_parent().get_node("BackGrd1")
 onready var Backgrd2 = get_parent().get_node("BackGrd2")
 onready var Backgrd3 = get_parent().get_node("BackGrd3")
@@ -16,7 +16,9 @@ var background3_initial
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#position.x = 0
+	if Mario == null:
+		Mario = get_parent().get_node("Mario")
+	position.x = 0
 	last_position_x = position.x
 	background1_initial = Backgrd1.position.x    
 	background2_initial = Backgrd2.position.x    
