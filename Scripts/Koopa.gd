@@ -80,7 +80,7 @@ func _on_Area2D_solG_body_exited(body):
 			dir *= -1
 			$Area2DTete/CollisionShape2_Tete.position.x = $Area2DTete/CollisionShape2_Tete.position.x + 3.4
 			$Area2D_solG.position.x = $Area2D_solG.position.x + 19
-			$Area2D_Gauche.position.x = $Area2D_Gauche.position.x + 18
+			$Area2D_Gauche.position.x = $Area2D_Gauche.position.x + 4
 			$CollisionShape2D.position.x = $CollisionShape2D.position.x + 3.2
 			gauche = 1
 			TimeoutTourner()
@@ -89,7 +89,7 @@ func _on_Area2D_solG_body_exited(body):
 			$Area2DTete/CollisionShape2_Tete.position.x = $Area2DTete/CollisionShape2_Tete.position.x - 3.4
 			gauche = 0
 			$Area2D_solG.position.x = $Area2D_solG.position.x - 19
-			$Area2D_Gauche.position.x = $Area2D_Gauche.position.x - 18
+			$Area2D_Gauche.position.x = $Area2D_Gauche.position.x - 4
 			$CollisionShape2D.position.x = $CollisionShape2D.position.x - 3.2
 			TimeoutTourner()
 

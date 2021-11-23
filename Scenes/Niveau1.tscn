@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scenes/BackGrd1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Ressources/ciel.jpg" type="Texture" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://Scenes/Castle.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Gomba.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/CanvasLayerPause.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/CanvasLayerFinNiv1.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/CanvasLayerMort.tscn" type="PackedScene" id=15]
 
 [node name="Node2D" type="Node2D"]
 scale = Vector2( 4, 4 )
@@ -100,4 +102,8 @@ collision_layer = 36
 [node name="KinematicBody2D3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1878.47, 168.268 )
 
+[node name="CanvasLayerMort" parent="." instance=ExtResource( 15 )]
+
 [node name="CanvasLayer" parent="." instance=ExtResource( 13 )]
+
+[node name="CanvasLayer2" parent="." instance=ExtResource( 14 )]

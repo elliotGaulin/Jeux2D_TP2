@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Personnage.tscn" type="PackedScene" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://Scenes/Area2D_Fleur.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Area2D_Blocks.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/CanvasLayerPause.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/CanvasLayerFinTuto.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/CanvasLayerMort.tscn" type="PackedScene" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -23,7 +25,7 @@ font_data = ExtResource( 9 )
 scale = Vector2( 4, 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 677.43, 55.5902 )
+position = Vector2( 682.68, 55.5902 )
 texture = ExtResource( 8 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -36,7 +38,7 @@ position = Vector2( 455.922, 162.652 )
 scale = Vector2( 5, 5 )
 
 [node name="BackGrd1" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1131.81, 173.02 )
+position = Vector2( 1131.25, 173.02 )
 scale = Vector2( 5, 5 )
 
 [node name="BackGrd2" parent="." instance=ExtResource( 4 )]
@@ -131,3 +133,7 @@ scale = Vector2( 0.25, 0.25 )
 position = Vector2( 56.8636, 207.005 )
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 12 )]
+
+[node name="CanvasLayer2" parent="." instance=ExtResource( 13 )]
+
+[node name="CanvasLayer3" parent="." instance=ExtResource( 14 )]

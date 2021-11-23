@@ -22,13 +22,13 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 8.7594, 5.0584 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 2.79473, 5.49837 )
 
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 0.343388, 1.92758 )
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 0.919292, 1.92758 )
 
-[sub_resource type="CapsuleShape2D" id=5]
+[sub_resource type="CapsuleShape2D" id=7]
 radius = 4.96816
 height = 11.5872
 
@@ -41,39 +41,36 @@ position = Vector2( 0.882653, -9.38686 )
 frames = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( -0.984627, 1.48444 )
 shape = SubResource( 4 )
 
 [node name="Area2D_Gauche" type="Area2D" parent="."]
-visible = false
 position = Vector2( -0.0719938, 0.0981009 )
 collision_layer = 32
 collision_mask = 17
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Gauche"]
 position = Vector2( -9.79522, 0.119206 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D_Gauche"]
 position = Vector2( 7.63059, 0.0607597 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="Area2D_solG" type="Area2D" parent="."]
-visible = false
 position = Vector2( -9, 9.599 )
 collision_layer = 32
 collision_mask = 17
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_solG"]
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="Area2DTete" type="Area2D" parent="."]
 
 [node name="CollisionShape2_Tete" type="CollisionShape2D" parent="Area2DTete"]
 position = Vector2( -1.36004, -7.92802 )
 rotation = -0.652753
-shape = SubResource( 5 )
+shape = SubResource( 7 )
 
 [connection signal="area_exited" from="Area2D_Gauche" to="." method="_on_Area2D_Gauche_area_exited"]
 [connection signal="body_entered" from="Area2D_Gauche" to="." method="_on_Area2D_Gauche_body_entered"]
