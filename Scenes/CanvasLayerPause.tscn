@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Popup.gd" type="Script" id=1]
+[ext_resource path="res://Ressources/font/04B_30__.TTF" type="DynamicFontData" id=2]
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 48
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Popup" type="Popup" parent="."]
+pause_mode = 2
+visible = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1920.0
+margin_bottom = -1080.0
+theme = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup"]
+margin_right = 1920.0
+margin_bottom = 1087.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Popup/VBoxContainer"]
+margin_top = 402.0
+margin_right = 1920.0
+margin_bottom = 527.0
+custom_fonts/font = SubResource( 2 )
+text = "PAUSE
+"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="Popup/VBoxContainer"]
+margin_top = 531.0
+margin_right = 1920.0
+margin_bottom = 684.0
+custom_fonts/font = SubResource( 3 )
+text = "Appuyer sur \"Escape\"
+pour retourner au jeu
+"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
