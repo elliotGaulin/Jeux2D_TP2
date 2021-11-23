@@ -14,7 +14,7 @@ height = 11.5872
 extents = Vector2( 2.79473, 5.49837 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 0.343388, 1.92758 )
+extents = Vector2( 1.96567, 1.92758 )
 
 [sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 1 )

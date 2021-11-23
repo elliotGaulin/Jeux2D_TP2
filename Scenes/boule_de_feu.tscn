@@ -18,6 +18,7 @@ animations = [ {
 } ]
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
+scale = Vector2( 0.25, 0.25 )
 collision_layer = 4
 script = ExtResource( 6 )
 
@@ -27,5 +28,4 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.06, 0.06 )
 frames = SubResource( 2 )
-frame = 4
 playing = true

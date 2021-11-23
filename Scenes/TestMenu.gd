@@ -1,6 +1,5 @@
-extends Area2D
+extends Node2D
 
-onready var tilemap = get_parent().get_node("TileMap")
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -12,9 +11,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-func _on_Area2D_body_entered(body):
-	print(tilemap.world_to_map(position))
+func _process(delta):
+	if is_instance_valid($Personnage):
+		if $Personnage.global_position.x > 1950:
+			$Personnage.global_position.x = -200

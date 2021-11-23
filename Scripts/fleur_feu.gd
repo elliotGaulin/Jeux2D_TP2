@@ -11,9 +11,7 @@ func start(posx, posy):
 	position.x = posx
 	position.y = posy
 	derniere_y = posy
-	scale.x += 3
-	scale.y += 3
-	
+
 func _physics_process(delta):
-	if position.y > derniere_y - 10:
+	if position.y > derniere_y - 12:
 		position.y -= 1

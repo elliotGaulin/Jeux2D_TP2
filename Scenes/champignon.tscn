@@ -11,10 +11,9 @@ region = Rect2( 0, 0, 16, 16 )
 radius = 7.92382
 
 [node name="Champignon" type="KinematicBody2D"]
-scale = Vector2( 4, 4 )
 script = ExtResource( 2 )
-gravity = 400
-vitesse = 200
+gravity = 100
+vitesse = 300
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = SubResource( 1 )
