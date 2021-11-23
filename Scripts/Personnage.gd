@@ -78,7 +78,7 @@ func _process(delta):
 			$AnimatedSprite.play()
 		
 	if Input.is_action_just_pressed("tirer"):
-		if etat == "feu":
+		if etat == "feu" && $Timer_tirer.is_stopped():
 			tirer()
 		
 func changer_etat(nouvel_etat):

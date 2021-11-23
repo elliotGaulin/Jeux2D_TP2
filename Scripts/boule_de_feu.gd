@@ -23,14 +23,14 @@ func _physics_process(delta):
 	var slide_count = get_slide_count()
 	if slide_count:
 		nombre_collision += 1
+		var collision = get_slide_collision(slide_count - 1)
+		_collision(collision)
 		if nombre_collision > max_collision:
 			queue_free()
 			return
-		var collision = get_slide_collision(slide_count - 1)
-		_collision(collision)
 #Action effectuée lors d'une collision
 func _collision(collision):
-	if collision.collider.has_method("hit"):
+	if collision.collider.has_method("hit") && collision.collider.name != "Personnage":
 		collision.collider.hit()
 		queue_free()
 	else:
