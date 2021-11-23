@@ -1,0 +1,98 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Mario1/Characters/Enemies.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Koopa.gd" type="Script" id=2]
+
+<<<<<<< HEAD
+[sub_resource type="AtlasTexture" id=1]
+=======
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8.7594, 5.0584 )
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 4.96816
+height = 11.5872
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 2.79473, 5.49837 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 1.96567, 1.92758 )
+
+[sub_resource type="AtlasTexture" id=5]
+>>>>>>> master
+atlas = ExtResource( 1 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 8.7594, 5.0584 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 2.79473, 5.49837 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 0.343388, 1.92758 )
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 4.96816
+height = 11.5872
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+collision_layer = 32
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.882653, -9.38686 )
+frames = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -0.984627, 1.48444 )
+shape = SubResource( 4 )
+
+[node name="Area2D_Gauche" type="Area2D" parent="."]
+visible = false
+position = Vector2( -0.0719938, 0.0981009 )
+collision_layer = 32
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Gauche"]
+position = Vector2( -9.79522, 0.119206 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D_Gauche"]
+position = Vector2( 7.63059, 0.0607597 )
+shape = SubResource( 6 )
+
+[node name="Area2D_solG" type="Area2D" parent="."]
+visible = false
+position = Vector2( -9, 9.599 )
+collision_layer = 32
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_solG"]
+shape = SubResource( 7 )
+
+[node name="Area2DTete" type="Area2D" parent="."]
+
+[node name="CollisionShape2_Tete" type="CollisionShape2D" parent="Area2DTete"]
+position = Vector2( -1.36004, -7.92802 )
+rotation = -0.652753
+shape = SubResource( 5 )
+
+[connection signal="area_exited" from="Area2D_Gauche" to="." method="_on_Area2D_Gauche_area_exited"]
+[connection signal="body_entered" from="Area2D_Gauche" to="." method="_on_Area2D_Gauche_body_entered"]
+[connection signal="body_exited" from="Area2D_solG" to="." method="_on_Area2D_solG_body_exited"]
+[connection signal="body_entered" from="Area2DTete" to="." method="_on_Area2DTete_body_entered"]

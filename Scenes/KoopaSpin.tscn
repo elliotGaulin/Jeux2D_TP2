@@ -24,13 +24,13 @@ radius = 4.58139
 height = 12.1478
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
-scale = Vector2( 4, 4 )
 collision_layer = 32
 collision_mask = 17
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
