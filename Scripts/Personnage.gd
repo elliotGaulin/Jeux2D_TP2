@@ -21,6 +21,10 @@ var collision_shape_grand = preload("res://Ressources/collisionShape_personnage_
 
 var boule_de_feu = preload('res://Scenes/boule_de_feu.tscn')
 
+onready var chateau = get_parent().get_node("Castle")
+
+onready var canvasLayerMort  = get_parent()
+
 func _ready():
 	name = "Personnage"
 	changer_etat("petit")
@@ -56,6 +60,8 @@ func _physics_process(delta):
 		_collision(collision)
 	$AnimatedSpriteDroite.visible = false
 	$AnimatedSpriteGauche.visible = false
+	if position.y > 1500:
+		mourrir()
 
 
 func _process(delta):
@@ -171,7 +177,6 @@ func hit():
 func mourrir():
 	print("he already dead")
 	queue_free()
-
+	
 func killKoopa():
 	velocity.y = jump_speed/1
-

@@ -20,16 +20,10 @@ func _ready():
 		Mario = get_parent().get_node("Mario")
 	position.x = 0
 	last_position_x = position.x
-	background1_initial = Backgrd1.position.x    
-	background2_initial = Backgrd2.position.x    
-	background3_initial = Backgrd3.position.x    
+
 
 func _process(delta):
 	if is_instance_valid(Mario):
 		if Mario.position.x >= 149:
 			position.x = Mario.position.x - 150
-			if position.x != last_position_x:
-				Backgrd1.position.x = position.x - last_position_x * 0.33333 + background1_initial
-				Backgrd2.position.x = position.x - last_position_x * 0.33333 + background2_initial
-				Backgrd3.position.x = position.x - last_position_x * 0.33333 + background3_initial
 			last_position_x = position.x

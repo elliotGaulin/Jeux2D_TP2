@@ -6,22 +6,33 @@
 atlas = ExtResource( 1 )
 region = Rect2( 256, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 1 )
-region = Rect2( 320, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 1 )
 region = Rect2( 416, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 1 )
-region = Rect2( 352, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 1 )
 region = Rect2( 288, 0, 32, 32 )
 
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 320, 0, 32, 32 )
+
+<<<<<<< HEAD
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 352, 0, 32, 32 )
+
+=======
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 352, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 416, 0, 32, 32 )
+
+>>>>>>> fb097b2cfe430066db582c9e44abcf6abbd81894
 [resource]
 animations = [ {
 "frames": [ SubResource( 1 ) ],
@@ -30,15 +41,19 @@ animations = [ {
 "speed": 10.0
 }, {
 <<<<<<< HEAD
-"frames": [ SubResource( 2 ) ],
+"frames": [ SubResource( 8 ) ],
 =======
-"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 5 ) ],
->>>>>>> 0f21bf52ca9c54384bf58839f81b1d959ec824c9
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+>>>>>>> fb097b2cfe430066db582c9e44abcf6abbd81894
 "loop": true,
 "name": "sauter",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 3 ), SubResource( 4 ) ],
+<<<<<<< HEAD
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+=======
+"frames": [ SubResource( 5 ) ],
+>>>>>>> fb097b2cfe430066db582c9e44abcf6abbd81894
 "loop": true,
 "name": "courrir",
 "speed": 10.0
