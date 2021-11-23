@@ -20,6 +20,6 @@ func _on_Area2D_Special_body_entered(body):
 	if (premierefois == true):
 		var b = champignon.instance()
 		get_parent().add_child(b)
-		b.start(position.x, position.y - 10, body.dir)
+		b.start(position.x, position.y - 10, 1)
 		queue_free()
 	

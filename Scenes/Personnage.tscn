@@ -6,17 +6,17 @@
 [ext_resource path="res://Ressources/hitbox_head.tres" type="Shape2D" id=4]
 [ext_resource path="res://Ressources/SmokeFX Lite 3A sheet.png" type="Texture" id=5]
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 1344, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 1408, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=9]
 flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 1472, 0, 64, 64 )
@@ -36,9 +36,9 @@ flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 1664, 0, 64, 64 )
 
-[sub_resource type="SpriteFrames" id=7]
+[sub_resource type="SpriteFrames" id=10]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
 "name": "default",
 "speed": 20.0
@@ -79,15 +79,15 @@ shape = ExtResource( 4 )
 visible = false
 position = Vector2( -10.7093, 4.56721 )
 scale = Vector2( 0.45, 0.45 )
-frames = SubResource( 7 )
-frame = 3
+frames = SubResource( 10 )
+frame = 1
 playing = true
 
 [node name="AnimatedSpriteDroite" type="AnimatedSprite" parent="."]
 visible = false
 position = Vector2( 11.2605, 4.48847 )
 scale = Vector2( 0.45, 0.45 )
-frames = SubResource( 7 )
-frame = 3
+frames = SubResource( 10 )
+frame = 1
 playing = true
 flip_h = true

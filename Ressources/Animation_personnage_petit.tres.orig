@@ -1,0 +1,52 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=2]
+
+[ext_resource path="res://Mario1/Characters/Mario.png" type="Texture" id=1]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 32, 32 )
+
+<<<<<<< HEAD
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 96, 0, 32, 32 )
+
+=======
+>>>>>>> 0f21bf52ca9c54384bf58839f81b1d959ec824c9
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 64, 0, 32, 32 )
+
+[resource]
+animations = [ {
+"frames": [ SubResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+}, {
+<<<<<<< HEAD
+"frames": [ SubResource( 2 ) ],
+=======
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 6 ) ],
+>>>>>>> 0f21bf52ca9c54384bf58839f81b1d959ec824c9
+"loop": true,
+"name": "sauter",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "courrir",
+"speed": 10.0
+} ]
