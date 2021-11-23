@@ -34,7 +34,7 @@ current = true
 script = ExtResource( 1 )
 
 [node name="BackGrd3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 455.922, 162.652 )
+position = Vector2( 309.441, 162.652 )
 scale = Vector2( 5, 5 )
 
 [node name="BackGrd1" parent="." instance=ExtResource( 5 )]
