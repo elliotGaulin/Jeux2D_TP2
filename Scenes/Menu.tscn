@@ -302,6 +302,7 @@ visible = false
 position = Vector2( -11.5502, 11.6097 )
 scale = Vector2( 0.45, 0.45 )
 frames = SubResource( 16 )
+frame = 4
 playing = true
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource( 14 )]

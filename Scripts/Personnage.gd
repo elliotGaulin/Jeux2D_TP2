@@ -66,14 +66,15 @@ func _physics_process(delta):
 
 func _process(delta):
 	get_input()
-	if Input.is_action_just_pressed("1"):
-		changer_etat("petit")
-	if Input.is_action_just_pressed("2"):
-		changer_etat("grand")
-	if Input.is_action_just_pressed("3"):
-		changer_etat("feu")
+# Pour débug : Permet de changer l'état de mario avec les touches
+#	if Input.is_action_just_pressed("1"):
+#		changer_etat("petit")
+#	if Input.is_action_just_pressed("2"):
+#		changer_etat("grand")
+#	if Input.is_action_just_pressed("3"):
+#		changer_etat("feu")
 	var dir = 0
-	
+	#Gestion de la direction / animations
 	if Input.is_action_pressed("walk_right"):
 		dir += 1
 		$AnimatedSprite.flip_h = false
@@ -91,12 +92,16 @@ func _process(delta):
 		else:
 			$AnimatedSprite.animation = "sauter"
 			$AnimatedSprite.play()
-		
+	#Tire si mario à le droit
 	if Input.is_action_just_pressed("tirer"):
 		if etat == "feu" && $Timer_tirer.is_stopped():
 			tirer()
-
-func changer_etat(nouvel_etat):
+"""
+Change l'état du personnage
+Collisions shape, AnimationFrames, etc.
+Mario devient invincible pendant un cours lapse de temps
+"""
+func changer_etat(nouvel_etat):		
 	if nouvel_etat == "petit":
 		etat = "petit"
 		$hitbox_tete.position = Vector2(0, -8.3875)
@@ -141,7 +146,9 @@ func changer_etat(nouvel_etat):
 	
 func get_etat():
 	return etat
-	
+"""
+Gère les collisions
+"""
 func _collision(collision):
 	var collider = collision.collider
 	#print(collider.name)
@@ -154,6 +161,9 @@ func _collision(collision):
 			changer_etat("feu")
 			collider.queue_free()
 			
+"""
+lance une boule de feu
+"""
 func tirer():
 	var b = boule_de_feu.instance()
 	if $AnimatedSprite.flip_h == true:
